@@ -28,6 +28,17 @@ if ($action == 'read') {
    } else {
       $response["massage = "] = 'Data Save Faild';
    }
+} elseif ($action == 'update') {
+   $id = $_POST['id'];
+   $name = $_POST['name'];
+   $username = $_POST['username'];
+   $email = $_POST['email'];
+   $result = $connection->query("");
+   if ($result) {
+      $response["massage = "] = 'Data Update Success';
+   } else {
+      $response["massage = "] = 'Data Update Faild';
+   }
 }
 
 header('content-type: application/json');
