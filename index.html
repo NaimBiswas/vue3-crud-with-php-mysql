@@ -29,17 +29,17 @@
                    <th>User Name</th>
                    <th>Email</th>
                    <th>Action</th>
-               </tr>
-               <tr>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>
-                     <button class="btn btn-warning">Edit</button>
-                     <button class="btn btn-danger">Delete</button>
-                  </td>
-               </tr>
+               </tr>             
+                     <tr v-for="(user, index) in users" ::key="index" >
+                        <td>{{ user.id }}</td>
+                        <td>{{ user.name }}</td>
+                        <td>{{ user.username  }}</td>
+                        <td>{{ user.email }}</td>
+                        <td>
+                           <button class="btn btn-warning">Edit</button>
+                           <button class="btn btn-danger">Delete</button>
+                        </td>
+                  </tr>   
       </table>
         </div>
      </div>
