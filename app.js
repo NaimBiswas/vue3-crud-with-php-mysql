@@ -7,7 +7,6 @@ const app = Vue.createApp({
             username: '',
             email: '',
          },
-         saveUser: false,
       }
    },
    methods: {
