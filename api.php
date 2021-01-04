@@ -42,7 +42,7 @@ if ($action == 'read') {
 } elseif ($action == 'delete') {
    $id = $_POST['id'];
 
-   $result = $connection->query("");
+   $result = $connection->query("DELETE FROM   `users` WHERE  `id` = '$id'");
    if ($result) {
       $response["massage = "] = 'Data Delete Success';
    } else {
