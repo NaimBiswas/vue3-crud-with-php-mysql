@@ -24,9 +24,9 @@ if ($action == 'read') {
    $email = $_POST['email'];
    $result = $connection->query("INSERT INTO `users`(`name`, `username`, `email`) VALUES ('$name', '$username','$email')");
    if ($result) {
-      $response["massage = "] = 'Data Added Success';
+      $response["massage "] = 'Data Added Success';
    } else {
-      $response["massage = "] = 'Data Save Faild';
+      $response["massage "] = 'Data Save Faild';
    }
 } elseif ($action == 'update') {
 
@@ -36,9 +36,9 @@ if ($action == 'read') {
    $email = $_POST['email'];
    $result = $connection->query("UPDATE `users` SET `name`='$name', `username`='$username', `email`='$email' WHERE `id` = '$id' ");
    if ($result) {
-      $response["massage = "] = 'Data Update Success';
+      $response["massage  "] = 'Data Update Success';
    } else {
-      $response["massage = "] = 'Data Update Faild';
+      $response["massage  "] = 'Data Update Faild';
    }
 } elseif ($action == 'delete') {
 
@@ -46,9 +46,9 @@ if ($action == 'read') {
 
    $result = $connection->query("DELETE FROM   `users` WHERE  `id` = '$id'");
    if ($result) {
-      $response["massage = "] = 'Data Delete Success';
+      $response["massage "] = 'Data Delete Success';
    } else {
-      $response["massage = "] = 'Data Delete Faild';
+      $response["massage "] = 'Data Delete Faild';
    }
 }
 
