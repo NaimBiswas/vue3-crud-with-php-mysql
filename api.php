@@ -16,7 +16,17 @@ if ($action == 'read') {
    while ($row = $result->fetch_assoc()) {
 
       array_push($users, $row);
-      $response = ['users' => $users];
+      $response['users'] = $users;
+   }
+} elseif ($action == 'create') {
+   $name = $_POST['name'];
+   $username = $_POST['username'];
+   $email = $_POST['email'];
+   $result = $connection->query("INSERT INTO `users`(`name`, `username`, `email`) VALUES ('$name', '$username','$email')");
+   if ($result) {
+      $response["massage = "] = 'Data Added Success';
+   } else {
+      $response["massage = "] = 'Data Save Faild';
    }
 }
 
