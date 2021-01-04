@@ -39,6 +39,15 @@ if ($action == 'read') {
    } else {
       $response["massage = "] = 'Data Update Faild';
    }
+} elseif ($action == 'delete') {
+   $id = $_POST['id'];
+
+   $result = $connection->query("");
+   if ($result) {
+      $response["massage = "] = 'Data Delete Success';
+   } else {
+      $response["massage = "] = 'Data Delete Faild';
+   }
 }
 
 header('content-type: application/json');
