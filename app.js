@@ -1,3 +1,15 @@
 const app = Vue.createApp({
-    
- }).mount('#app')
+    data() {
+       return {
+          
+       }
+   },
+   methods: {
+      
+   },
+   
+})
+app.component('', {
+   props: [],
+  template:``, 
+}).mount('#app')
