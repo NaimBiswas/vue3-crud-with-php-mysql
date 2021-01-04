@@ -33,7 +33,7 @@ if ($action == 'read') {
    $name = $_POST['name'];
    $username = $_POST['username'];
    $email = $_POST['email'];
-   $result = $connection->query("");
+   $result = $connection->query("UPDATE `users` SET `name`='$name',`username`='$username',`email`='$email' WHERE 'id' = '$id");
    if ($result) {
       $response["massage = "] = 'Data Update Success';
    } else {
