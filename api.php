@@ -4,6 +4,7 @@ $connection = mysqli_connect('localhost', 'root', '', 'vue_crud');
 $action = "read";
 
 $response = [];
+
 if (isset($_GET['action'])) {
    $action = $_GET['action'];
 }
