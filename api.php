@@ -29,17 +29,19 @@ if ($action == 'read') {
       $response["massage = "] = 'Data Save Faild';
    }
 } elseif ($action == 'update') {
+
    $id = $_POST['id'];
    $name = $_POST['name'];
    $username = $_POST['username'];
    $email = $_POST['email'];
-   $result = $connection->query("UPDATE `users` SET `name`='$name',`username`='$username',`email`='$email' WHERE 'id' = '$id");
+   $result = $connection->query("UPDATE `users` SET `name`='$name', `username`='$username', `email`='$email' WHERE `id` = '$id' ");
    if ($result) {
       $response["massage = "] = 'Data Update Success';
    } else {
       $response["massage = "] = 'Data Update Faild';
    }
 } elseif ($action == 'delete') {
+
    $id = $_POST['id'];
 
    $result = $connection->query("DELETE FROM   `users` WHERE  `id` = '$id'");
