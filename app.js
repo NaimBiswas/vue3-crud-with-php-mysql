@@ -2,6 +2,11 @@ const app = Vue.createApp({
     data() {
        return {
           users: [],
+          form: {
+             name: '',
+             username: '',
+             email: '',
+          },
        }
    },
    methods: {

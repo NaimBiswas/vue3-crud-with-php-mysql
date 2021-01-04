@@ -43,10 +43,7 @@
                   </tr>   
       </table>
         </div>
-     </div>
-    <!-- Add User Modal  -->
-     <div class="appTwo">
-        <!-- Add User modal  -->
+          <!-- Add User modal  -->
          <div class="modal fade" id="addUser" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
             <div class="modal-content">
@@ -57,13 +54,15 @@
                </button>
                </div>
                <div class="modal-body">
-                  <form action="" method="POST">
+                  <form>
                      <label for="name">Name:</label>
-                     <input id="name" class="form-control" type="text" placeholder="Enter Your Name">
+                     <input v-model="form.name" id="name" class="form-control" type="text" placeholder="Enter Your Name">
+                     
                      <label for="username">User Name:</label>
-                     <input id="username" class="form-control" type="text" placeholder="Enter Your User Name">
+                     <input v-model="form.username" id="username" class="form-control" type="text" placeholder="Enter Your User Name">
+                     
                      <label for="email">Email Address:</label>
-                     <input id="email" class="form-control" type="text" placeholder="Enter Your Email Address">
+                     <input v-model="form.email" id="email" class="form-control" type="text" placeholder="Enter Your Email Address">
                   </form>
                   
                </div>
@@ -74,8 +73,9 @@
             </div>
          </div>
          </div>
-         <!-- Edit Modal  -->
-         <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+         
+         
+           <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
          <div class="modal-dialog" role="document">
             <div class="modal-content">
                <div class="modal-header">
@@ -95,7 +95,6 @@
          </div>
          </div>
      </div>
-     
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
